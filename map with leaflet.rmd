@@ -1,0 +1,30 @@
+---
+title: "Interactive Map with Leaflet"
+author: "Thijs Blom"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    self_contained: true
+    css: style.css
+---
+
+# Load packages
+
+```{r}
+
+library(leaflet)
+```
+
+# Create a Leaflet map (location Empire State Building)
+
+```{r}
+map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng = -73.9857, lat = 40.7484, popup = "Empire State Building") # Example: New York location
+
+map
+```
+
+
+
+
